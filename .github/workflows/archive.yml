@@ -1,0 +1,47 @@
+name: Publish HEMA archive
+on:
+  workflow_dispatch:
+    inputs:
+      revision:
+        description: Commit or branch of aaovch/video-wisper-web to publish
+        required: true
+        default: main
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: archive-pages
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7
+        with:
+          repository: aaovch/video-wisper-web
+          ref: ${{ inputs.revision }}
+          path: archive
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: archive/package-lock.json
+      - run: npm ci
+        working-directory: archive
+      - run: npm run qa-report -- --all
+        working-directory: archive
+        env:
+          BASE_PATH: ''
+      - run: |
+          cp -r pilot archive/build/pilot
+          cp pilot/example.json archive/build/example.json
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: archive/build
+      - id: deploy
+        uses: actions/deploy-pages@v5
