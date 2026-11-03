@@ -38,6 +38,9 @@ jobs:
         env:
           BASE_PATH: ''
       - run: |
+          mkdir -p archive/build/analytics
+          curl --fail --silent --show-error --retry 3 https://aaovch.github.io/video-wisper-web/analytics/summary.json -o archive/build/analytics/summary.json
+          jq -e 'type == "object"' archive/build/analytics/summary.json > /dev/null
           cp -r pilot archive/build/pilot
           cp pilot/example.json archive/build/example.json
       - uses: actions/upload-pages-artifact@v5
