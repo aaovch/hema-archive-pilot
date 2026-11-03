@@ -1,0 +1,118 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HEMA-архив · Поиск по семинару</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#f6f3eb;color:#202d28;font:17px/1.55 system-ui}main{max-width:850px;margin:auto;padding:40px 20px}header{border-top:4px solid #245746;padding-top:18px;color:#315c4b;letter-spacing:.12em}h1{font:clamp(32px,6vw,54px)/1.1 Georgia}input[type=search]{width:100%;padding:14px;border:1px solid #76887f;border-radius:8px;font:inherit}article{padding:18px 0;border-bottom:1px solid #cad0c4}h2{font:24px Georgia;margin:0}a{color:#185842}small,summary{color:#46594d}details{margin-top:32px}</style>
+<main><header>HEMA-АРХИВ　/　ПИЛОТ</header><h1 id="title"></h1><label for="q">Найти фрагмент семинара</label><input type="search" id="q" placeholder="Например, оппозиция"><small id="count" aria-live="polite"></small><section id="hits"></section><details><summary>Пример импорта для автора</summary><p>Скачайте <a href="example.json" download>пример JSON</a>, измените описание главы и откройте файл здесь. Предпросмотр действует до обновления страницы.</p><input type="file" accept=".json" id="file"><p id="msg" role="status"></p></details></main>
+<script>
+let record={
+  "version": 1,
+  "slug": "ukol-po-centralnoy-linii",
+  "title": "Укол по центральной линии",
+  "youtube": "92XPlod0yG8",
+  "chapters": [
+    {
+      "start": 116.5,
+      "title": "Зачем тренировать укол",
+      "summary": "Тренер вводит укол как рискованную, но результативную трёхбалльную технику и объясняет, почему её стоит сделать отдельным предметом тренировки."
+    },
+    {
+      "start": 190.1,
+      "title": "Контакт и мягкий дожим",
+      "summary": "На клинке, поставленном в пол или на стопу, участники осваивают изгиб вверх и распределение давления между руками."
+    },
+    {
+      "start": 613.22,
+      "title": "Первый укол по мишени",
+      "summary": "Первое парное упражнение изолирует касание и дожим по неподвижному партнёру без шага и лишнего замаха."
+    },
+    {
+      "start": 1051.48,
+      "title": "Две ошибки наведения",
+      "summary": "Разбираются отклонение клинка от линии предплечья и неполное разгибание ведущей руки, из-за которых теряются точность и оппозиция."
+    },
+    {
+      "start": 1199.01,
+      "title": "Проверка структуры рычагом",
+      "summary": "Партнёр давит клинком на сформированный укол, чтобы проверить, держится ли позиция без лишнего мышечного усилия."
+    },
+    {
+      "start": 1437.27,
+      "title": "Укол с шагом",
+      "summary": "К уже знакомому движению рук добавляется шаг, при этом укол начинается рукой и завершается раньше движения ног."
+    },
+    {
+      "start": 1772.32,
+      "title": "Дожим без лишнего усилия",
+      "summary": "Перед переходом к боевым ситуациям тренер уточняет, как получать сильный изгиб клинка коротким дожимом, не зажимая руки заранее."
+    },
+    {
+      "start": 1877.26,
+      "title": "Контратака с оппозицией",
+      "summary": "Укол выполняется навстречу нисходящему удару, а гарда и изгиб клинка закрывают верхнюю линию."
+    },
+    {
+      "start": 2325.79,
+      "title": "Контратака на вход соперника",
+      "summary": "Монитор делает замедленный удар с быстрым шагом, а исполнитель тренирует встречный укол на месте без собственного шага."
+    },
+    {
+      "start": 2734.87,
+      "title": "Рычаг, высота и безопасность",
+      "summary": "Тренер связывает работоспособность оппозиции с высотой цели и точкой контакта, отдельно ограничивая опасные уколы в маску и шею."
+    },
+    {
+      "start": 2844.75,
+      "title": "Атака через угрозу клинком",
+      "summary": "Атакующий продвигает клинок через нейтральную угрозу партнёра и подцепляет слабую долю его оружия крестовиной."
+    },
+    {
+      "start": 3121.55,
+      "title": "Защита с ответом уколом",
+      "summary": "Последнее техническое задание показывает простой ответ уколом после взятой защиты с обеих сторон."
+    },
+    {
+      "start": 3145.52,
+      "title": "Простой и сложный ответы",
+      "summary": "Сравниваются прямой ответ из принятой защиты и перегруженные варианты, которые отдают линию и задерживают укол."
+    },
+    {
+      "start": 3589.76,
+      "title": "Вопросы о выборе укола",
+      "summary": "В перерыве разбираются давление соперника на линию, цена промаха и соотношение скорости с качеством техники."
+    },
+    {
+      "start": 3826.68,
+      "title": "Подготовка длинного укола",
+      "summary": "Финальная прогрессия учит готовить длинный укол так, чтобы занять линию и не предупредить соперника преждевременным напряжением."
+    },
+    {
+      "start": 3961.39,
+      "title": "Укол в одно движение",
+      "summary": "Отдельные учебные фазы соединяются в одно действие: забросить клинок, коснуться, наклониться и дожать."
+    },
+    {
+      "start": 4038.27,
+      "title": "Скольжение и отвлечение внимания",
+      "summary": "Клинок скользит по оружию партнёра вниз и вверх, заставляя его следить за руками и открывая момент для укола."
+    },
+    {
+      "start": 4337.87,
+      "title": "Интенция в подготовке",
+      "summary": "Участникам добавляют цель и направление: движение по клинку должно не чесать оружие, а создавать реальную угрозу укола."
+    },
+    {
+      "start": 4479.36,
+      "title": "Итоги и главный принцип",
+      "summary": "Тренер подводит итог: центральный укол закрывает основные контексты, а его работоспособность держится на решительности, дистанции и последовательности контакта с дожимом."
+    }
+  ]
+};
+const el=id=>document.getElementById(id);
+function render(){
+ el('title').textContent=record.title;
+ const words=el('q').value.toLocaleLowerCase('ru').trim().split(/\s+/);
+ const chapters=record.chapters.filter(c=>words.every(w=>(c.title+' '+c.summary).toLocaleLowerCase('ru').includes(w)));
+ el('hits').replaceChildren();el('count').textContent=chapters.length?'Найдено глав: '+chapters.length:'Совпадений нет. Попробуйте сократить запрос.';
+ for(const c of chapters){const row=document.createElement('article'),heading=document.createElement('h2'),desc=document.createElement('p'),link=document.createElement('a');
+ heading.textContent=c.title;desc.textContent=c.summary;const t=Math.floor(c.start);link.href='https://www.youtube.com/watch?v='+record.youtube+'&t='+t+'s';link.textContent='▶ '+Math.floor(t/60)+':'+String(t%60).padStart(2,'0')+' · Смотреть с этого момента';row.append(heading,desc,link);el('hits').append(row);}
+}
+el('q').oninput=render;
+el('file').onchange=async e=>{try{const r=JSON.parse(await e.target.files[0].text());if(r.version!==1||typeof r.title!=='string'||!/^[A-Za-z0-9_-]{11}$/.test(r.youtube)||!Array.isArray(r.chapters)||!r.chapters.length||!r.chapters.every(c=>Number.isFinite(c.start)&&c.start>=0&&typeof c.title==='string'&&typeof c.summary==='string'))throw Error();record=r;el('q').value='';render();el('msg').textContent='Черновик открыт.';}catch{el('msg').textContent='Проверьте формат по примеру JSON.'}};render();</script></html>
